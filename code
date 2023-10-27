@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Appointment App</title>
+</head>
+<body>
+
+    
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        
+        <label for="phone">Phone number:</label>
+        <input type="text" id="phone" name="phone">
+        
+        <input type="button" value="Submit" onclick="submitForm()">
+    
+    </form>
+    
+    <div id="output"></div>
+
+    <script>
+
+        function submitForm() {
+            // Get the values from the form
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            // Display the submitted information below
+            var outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = name + ' - ' + email + ' - ' + phone;
+                                  
+        }
+    </script>
+    
+    
+</body>
+</html>
